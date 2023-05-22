@@ -65,15 +65,15 @@ class _PostCommentPageState extends State<PostCommentPage> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            TextField(
-              controller: _captionController,
-              decoration: InputDecoration(
-                labelText: 'Caption',
-                labelStyle: TextStyle(
-                    color: Colors.white
+            children: [
+              TextField(
+                controller: _captionController,
+                decoration: InputDecoration(
+                  labelText: 'Caption',
+                  labelStyle: TextStyle(
+                      color: Colors.white
+                  ),
                 ),
-              ),
               maxLines: 3,
             ),
             SizedBox(height: 16.0),
