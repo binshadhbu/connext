@@ -1,11 +1,11 @@
-import 'package:con_next/post_neet.dart';
+//import 'package:con_next/post_neet.dart';
 import 'package:flutter/material.dart';
-import 'package:con_next/post.dart';
-import 'package:con_next/choose.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+// import 'package:con_next/post.dart';
+// import 'package:con_next/choose.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/material.dart';
+// import 'package:firebase_core/firebase_core.dart';
+// import 'package:flutter/material.dart';
 import 'package:con_next/auth/auth_controller.dart';
 import 'package:get/get.dart';
 import 'auth/splash_screen.dart';
@@ -24,11 +24,6 @@ import 'auth/splash_screen.dart';
 // }
 //
 
-
-
-
-
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp().then((value)=>Get.put(AuthController()));
@@ -41,7 +36,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
