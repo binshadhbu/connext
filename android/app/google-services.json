@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "690085585333",
+    "project_id": "connext-eb2c0",
+    "storage_bucket": "connext-eb2c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690085585333:android:edf4a893a806be09b0b9fc",
+        "android_client_info": {
+          "package_name": "sanaflutter.com.con_next"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690085585333-qbl1voqp4s9v3fg9tudv175bttstj6jo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK_guSxSXf00gYiM7XxjrS3Ufkj_h_p9k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "690085585333-qbl1voqp4s9v3fg9tudv175bttstj6jo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

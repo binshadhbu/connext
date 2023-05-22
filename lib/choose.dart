@@ -9,6 +9,13 @@ class _chooseState extends State<choose> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Choose your area of interest'
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.blueGrey,
+      ),
       backgroundColor: Colors.grey[600],
       body: Center(
         child: Column(
@@ -16,7 +23,7 @@ class _chooseState extends State<choose> {
           children: [
                 Expanded(
                   child:FractionallySizedBox(
-                    widthFactor: 0.5,
+                    widthFactor: 1,
                     child:Image.network('https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80',
                     fit: BoxFit.cover),
                   ),
