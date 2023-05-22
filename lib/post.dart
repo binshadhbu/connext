@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 class PostCommentPage extends StatefulWidget {
   @override
@@ -23,15 +25,31 @@ class _PostCommentPageState extends State<PostCommentPage> {
     super.dispose();
   }
 
-  void _submitPost(){
+  void _submitPost() async {
     String caption = _captionController.text;
-    print('Caption:$caption');
+    await FirebaseFirestore.instance.collection('posts').add(
+      {
+        'caption':caption,
+        'photoURL':'',
+      }
+    );
+    //print('Caption:$caption');
+    _captionController.clear();
   }
-  void _submitComment() {
+  void _submitComment() async{
     String comment = _commentController.text;
-    // Here you can perform any logic to submit the comment to your backend or process it as needed
-    // For this example, we'll simply print the comment
-    print(comment);
+    CollectionReference comments =
+    FirebaseFirestore.instance.collection('comments');
+    await FirebaseFirestore.instance.collection('comments').add(
+      {
+        'commentText':comment,
+      }
+    );
+    //print(comment);
+    setState(() {
+      comments.add(comment);
+      _commentController.clear();
+    });
   }
 
   @override
