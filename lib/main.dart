@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 // import 'package:firebase_core/firebase_core.dart';
 // import 'package:flutter/material.dart';
-import 'package:con_next/auth/auth_controller.dart';
+import 'package:con_next/services/auth_controller.dart';
 import 'package:get/get.dart';
 import 'auth/splash_screen.dart';
-//
+
 // void main() async {
 //   WidgetsFlutterBinding.ensureInitialized();
 //   await Firebase.initializeApp();
@@ -22,7 +22,7 @@ import 'auth/splash_screen.dart';
 //     },
 //   ));
 // }
-//
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

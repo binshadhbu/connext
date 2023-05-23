@@ -61,44 +61,53 @@ class _PostCommentPageState extends State<PostCommentPage> {
         centerTitle:true,
         backgroundColor: Colors.blueGrey,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              TextField(
-                controller: _captionController,
-                decoration: InputDecoration(
-                  labelText: 'Caption',
-                  labelStyle: TextStyle(
-                      color: Colors.white
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/choose.jpeg'), // set the image path here
+            fit: BoxFit.cover, // set the fit property to cover or contain
+          ),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TextField(
+                  controller: _captionController,
+                  decoration: InputDecoration(
+                    labelText: 'Caption',
+                    labelStyle: TextStyle(
+                        color: Colors.black45,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-              maxLines: 3,
-            ),
-            SizedBox(height: 16.0),
-            ElevatedButton(
-              onPressed: _submitPost,
-              child: Text('Post'),
-            ),
-            SizedBox(height: 32.0),
-            Text(
-              'Start a conversation',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold,  color: Colors.white),
-            ),
-            SizedBox(height: 16.0),
-            TextField(
-              controller: _commentController,
-              /*decoration: InputDecoration(
-                labelText: '',
-              ),*/
-              onSubmitted: (_) => _submitComment(),
-            ),
-            ElevatedButton(
-              onPressed: _submitComment,
-              child: Text('OK'),
-            ),
-          ],
+                maxLines: 3,
+              ),
+              SizedBox(height: 16.0),
+              ElevatedButton(
+                onPressed: _submitPost,
+                child: Text('Post'),
+              ),
+              SizedBox(height: 32.0),
+              Text(
+                'Start a conversation',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold,  color: Colors.black45),
+              ),
+              SizedBox(height: 16.0),
+              TextField(
+                controller: _commentController,
+                /*decoration: InputDecoration(
+                  labelText: '',
+                ),*/
+                onSubmitted: (_) => _submitComment(),
+              ),
+              ElevatedButton(
+                onPressed: _submitComment,
+                child: Text('OK'),
+              ),
+            ],
+          ),
         ),
       ),
     );
