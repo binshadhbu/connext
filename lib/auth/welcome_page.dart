@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:con_next/auth/auth_controller.dart';
+import 'package:con_next/services/auth_controller.dart';
 
 class WelcomePage extends StatelessWidget {
   String? email;

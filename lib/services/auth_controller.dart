@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:con_next/pages/choose.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -25,7 +26,7 @@ class  AuthController extends GetxController {
       Get.offAll(()=>LoginPage());
     }else{
       print("welcome page");
-      Get.offAll(()=>WelcomePage(email: user.email,));
+      Get.offAll(()=>choose(user.email));
     }
   }
   Future<void> register(String email,password) async {
